@@ -53,7 +53,63 @@ const companiesData = [
         revenue: "$2 billion",
         ebitda: "$300 million",
     },
-    // Add more example company data as needed
+        {
+        name: "Company C",
+        industry: "Technology",
+        description: "A leading tech company specializing in software development and cloud services.",
+        revenue: "$5 billion",
+        ebitda: "$800 million",
+    },
+    {
+        name: "Company D",
+        industry: "Healthcare",
+        description: "A pharmaceutical company focused on innovative treatments for various diseases.",
+        revenue: "$4.5 billion",
+        ebitda: "$600 million",
+    },
+    {
+        name: "Company E",
+        industry: "Retail",
+        description: "A global retail giant with a diverse range of consumer products and services.",
+        revenue: "$10 billion",
+        ebitda: "$1.2 billion",
+    },
+    {
+        name: "Company F",
+        industry: "Automotive",
+        description: "A leading car manufacturer known for its eco-friendly electric vehicles.",
+        revenue: "$7 billion",
+        ebitda: "$900 million",
+    },
+    {
+        name: "Company G",
+        industry: "Telecommunications",
+        description: "A telecommunications company providing cutting-edge mobile and internet services.",
+        revenue: "$6 billion",
+        ebitda: "$1 billion",
+    },
+    {
+        name: "Company H",
+        industry: "Energy",
+        description: "An energy company specializing in renewable energy projects and sustainable solutions.",
+        revenue: "$8 billion",
+        ebitda: "$1.5 billion",
+    },
+    {
+        name: "Company I",
+        industry: "Entertainment",
+        description: "A media conglomerate producing films, television shows, and digital content.",
+        revenue: "$9 billion",
+        ebitda: "$1.3 billion",
+    },
+    {
+        name: "Company J",
+        industry: "Aerospace",
+        description: "An aerospace and defense company known for advanced aircraft and technology.",
+        revenue: "$7.5 billion",
+        ebitda: "$1.1 billion",
+    }
+    
 ];
 
 // Load the Company Universe content when the tab is clicked
