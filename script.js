@@ -1,29 +1,33 @@
-let balance = 10000;
-let stockPrices = {
-    A: 50.00,
-    B: 30.00,
-    // Add more companies and initial stock prices here
-};
+// JavaScript for tab switching
+document.getElementById("dashboard-tab").addEventListener("click", function () {
+    loadDashboardContent();
+});
 
-function buyStock(company) {
-    const stockPrice = stockPrices[company];
-    if (balance >= stockPrice) {
-        balance -= stockPrice;
-        updateBalance();
-        // Add logic to manage the player's stock portfolio
-        alert(`You bought a share of Company ${company} for $${stockPrice}.`);
-    } else {
-        alert("Insufficient balance to buy this stock.");
-    }
+document.getElementById("company-tab").addEventListener("click", function () {
+    loadCompanyUniverseContent();
+});
+
+document.getElementById("progress-tab").addEventListener("click", function () {
+    loadProgressTrackerContent();
+});
+
+document.getElementById("resources-tab").addEventListener("click", function () {
+    loadResourcesContent();
+});
+
+// Functions to load content for each tab
+function loadDashboardContent() {
+    // Load dashboard content here
 }
 
-function sellStock(company) {
-    // Add logic to sell stocks
-    alert(`You sold a share of Company ${company}.`);
+function loadCompanyUniverseContent() {
+    // Load company universe content here
 }
 
-function updateBalance() {
-    document.getElementById("balance").textContent = balance.toFixed(2);
+function loadProgressTrackerContent() {
+    // Load progress tracker content here
 }
 
-// Add more functions and game mechanics as needed
+function loadResourcesContent() {
+    // Load resources content here
+}
