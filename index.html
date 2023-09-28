@@ -5,17 +5,20 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <header>
-        <!-- Tab buttons -->
-        <div class="tabs">
-            <button id="dashboard-button">Dashboard</button>
-            <button id="company-tab">Company Universe</button>
-            <button id="progress-tab">Progress Tracker</button>
-            <button id="resources-tab">Resources</button>
-        </div>
-    </header>
+    <!-- Tab buttons -->
+    <button id="dashboard-tab">Dashboard</button>
+    <button id="company-tab">Company Universe</button>
 
     <!-- Content containers -->
+    <div id="dashboard-content" class="hidden">
+        <h2>Dashboard</h2>
+        <div class="dashboard-graph">
+            <img id="graph-image" src="example_graph.png" alt="Returns Over 5 Years">
+        </div>
+        <div class="dashboard-table">
+            <!-- ... -->
+        </div>
+    </div>
 
     <div id="company-universe-content" class="hidden">
         <h2>Company Universe</h2>
