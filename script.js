@@ -1,13 +1,10 @@
 // JavaScript for tab switching
-document.getElementById("dashboard").addEventListener("click", function () {
+document.getElementById("dashboard-button").addEventListener("click", function () {
     loadDashboardContent();
 });
 
 function loadDashboardContent() {
-    const dashboardContent = document.getElementById("dashboard");
-    dashboardContent.innerHTML = `
-      function loadDashboardContent() {
-    const dashboardContent = document.getElementById("dashboard");
+    const dashboardContent = document.getElementById("dashboard-content");
     dashboardContent.innerHTML = `
         <h2>Dashboard</h2>
         <div class="dashboard-graph">
@@ -30,8 +27,7 @@ function loadDashboardContent() {
         </div>
     `;
 }
-    `;
-}
+
 
 
 document.getElementById("company-tab").addEventListener("click", function () {
