@@ -15,10 +15,25 @@
         </div>
     </header>
 
-    <div id="content">
-       <div id="dashboard-content"></div>
+    <!-- Content containers -->
+    <div id="dashboard-content" class="hidden">
+        <h2>Dashboard</h2>
+        <div class="dashboard-graph">
+            <img id="graph-image" src="example_graph.png" alt="Returns Over 5 Years">
+        </div>
+        <div class="dashboard-table">
+            <!-- ... -->
+        </div>
+    </div>
 
-    <div id="company-universe-content"></div>
+    <div id="company-universe-content" class="hidden">
+        <h2>Company Universe</h2>
+        <div class="company-tabs">
+            <!-- Tabs and content will be generated here -->
+        </div>
+        <div class="company-details">
+            <!-- Company details will be displayed here -->
+        </div>
     </div>
     
     <script src="script.js"></script>
