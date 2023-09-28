@@ -1,5 +1,5 @@
 function loadDashboardContent() {
-    const dashboardContent = document.getElementById("content");
+    const dashboardContent = document.getElementById("dashboard");
     dashboardContent.innerHTML = `
         <h2>Dashboard</h2>
         <div class="dashboard-graph">
