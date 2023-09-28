@@ -8,7 +8,15 @@ function loadDashboardContent() {
     dashboardContent.innerHTML = `
         <h2>Dashboard</h2>
         <div class="dashboard-graph">
-            <!-- Example graph here -->
+    // Get a reference to the img tag
+    const graphImage = document.getElementById("graph-image");
+
+    // Generate a random number between 1 and 3 (or adjust the range as needed)
+    const randomGraphNumber = Math.floor(Math.random() * 3) + 1;
+
+    // Set the src attribute of the img tag to a random graph image
+    graphImage.src = `graph${randomGraphNumber}.png`; // Replace with your actual image names
+}
             <img id="graph-image" src="example_graph.png" alt="Returns Over 5 Years">
         </div>
         <div class="dashboard-table">
@@ -27,15 +35,7 @@ function loadDashboardContent() {
         </div>
     `;
 
-    // Get a reference to the img tag
-    const graphImage = document.getElementById("graph-image");
 
-    // Generate a random number between 1 and 3 (or adjust the range as needed)
-    const randomGraphNumber = Math.floor(Math.random() * 3) + 1;
-
-    // Set the src attribute of the img tag to a random graph image
-    graphImage.src = `graph${randomGraphNumber}.png`; // Replace with your actual image names
-}
 
 // Define an array of example company data
 const companiesData = [
