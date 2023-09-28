@@ -26,5 +26,14 @@ function loadDashboardContent() {
             </table>
         </div>
     `;
+
+    // Get a reference to the img tag
+    const graphImage = document.getElementById("graph-image");
+
+    // Generate a random number between 1 and 3 (or adjust the range as needed)
+    const randomGraphNumber = Math.floor(Math.random() * 3) + 1;
+
+    // Set the src attribute of the img tag to a random graph image
+    graphImage.src = `graph${randomGraphNumber}.png`; // Replace with your actual image names
 }
 
