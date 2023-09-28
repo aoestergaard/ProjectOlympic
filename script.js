@@ -3,6 +3,14 @@ document.getElementById("dashboard-tab").addEventListener("click", function () {
     loadDashboardContent();
 });
 
+function loadDashboardContent() {
+    const dashboardContent = document.getElementById("dashboard-content");
+    dashboardContent.innerHTML = `
+        <!-- Your Dashboard content here -->
+    `;
+}
+
+
 document.getElementById("company-tab").addEventListener("click", function () {
     loadCompanyUniverseContent();
 });
