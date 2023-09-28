@@ -9,7 +9,7 @@ function loadDashboardContent() {
         <h2>Dashboard</h2>
         <div class="dashboard-graph">
             <!-- Example graph here -->
-            <img src="example_graph.png" alt="Returns Over 5 Years">
+            <img id="graph-image" src="example_graph.png" alt="Returns Over 5 Years">
         </div>
         <div class="dashboard-table">
             <table>
@@ -34,6 +34,7 @@ function loadDashboardContent() {
     const randomGraphNumber = Math.floor(Math.random() * 3) + 1;
 
     // Set the src attribute of the img tag to a random graph image
-    graphImage.src = `graph1.png`; // Replace with your actual image names
+    graphImage.src = `graph${randomGraphNumber}.png`; // Replace with your actual image names
 }
+
 
