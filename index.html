@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Business Simulation Game</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Business Simulation Game</h1>
+        <p>Balance: $<span id="balance">10000</span></p>
+    </header>
+    
+    <div id="companies">
+        <div class="company">
+            <h2>Company A</h2>
+            <p>Stock Price: $<span id="stock-price-A">50.00</span></p>
+            <button onclick="buyStock('A')">Buy</button>
+            <button onclick="sellStock('A')">Sell</button>
+        </div>
+
+        <div class="company">
+            <h2>Company B</h2>
+            <p>Stock Price: $<span id="stock-price-B">30.00</span></p>
+            <button onclick="buyStock('B')">Buy</button>
+            <button onclick="sellStock('B')">Sell</button>
+        </div>
+
+        <!-- Add more companies as needed -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
