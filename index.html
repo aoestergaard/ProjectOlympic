@@ -1,40 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tab Switching Example</title>
-    <style>
-        /* Add your CSS styles here */
-        .hidden {
-            display: none;
-        }
-    </style>
+    <title>Business Simulation Game</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <!-- Tab buttons -->
-    <button id="dashboard-tab">Dashboard</button>
-    <button id="company-tab">Company Universe</button>
+    <header>
+        <!-- Tab buttons -->
+        <div class="tabs">
+            <button id="dashboard-button">Dashboard</button>
+            <button id="company-tab">Company Universe</button>
+            <button id="progress-tab">Progress Tracker</button>
+            <button id="resources-tab">Resources</button>
+        </div>
+    </header>
 
-    <!-- Content containers -->
-    <div id="dashboard-content" class="hidden">
-        <h2>Dashboard</h2>
-        <div class="dashboard-graph">
-            <img id="graph-image" src="example_graph.png" alt="Returns Over 5 Years">
-        </div>
-        <div class="dashboard-table">
-            <!-- ... -->
-        </div>
-    </div>
+    <div id="content">
+       <div id="dashboard-content"></div>
 
-    <div id="company-universe-content" class="hidden">
-        <h2>Company Universe</h2>
-        <div class="company-tabs">
-            <!-- Tabs and content will be generated here -->
-        </div>
-        <div class="company-details">
-            <!-- Company details will be displayed here -->
-        </div>
+    <div id="company-universe-content"></div>
     </div>
     
     <script src="script.js"></script>
