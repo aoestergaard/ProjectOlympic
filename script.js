@@ -1,10 +1,10 @@
 // JavaScript for tab switching
-document.getElementById("dashboard-tab").addEventListener("click", function () {
+document.getElementById("dashboard").addEventListener("click", function () {
     loadDashboardContent();
 });
 
 function loadDashboardContent() {
-    const dashboardContent = document.getElementById("dashboard-content");
+    const dashboardContent = document.getElementById("dashboard");
     dashboardContent.innerHTML = `
         <!-- Your Dashboard content here -->
     `;
