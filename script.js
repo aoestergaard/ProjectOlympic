@@ -1,8 +1,76 @@
-// JavaScript for tab switching
-document.getElementById("dashboard-button").addEventListener("click", function () {
-    console.log("Dashboard button clicked"); // Debugging line
-    loadDashboardContent();
-});
+        // JavaScript code for tab switching
+        document.getElementById("dashboard-button").addEventListener("click", function () {
+            hideAllTabs();
+            loadDashboardContent();
+        });
+
+        document.getElementById("company-tab").addEventListener("click", function () {
+            hideAllTabs();
+            loadCompanyUniverseContent();
+        });
+
+        document.getElementById("progress-tab").addEventListener("click", function () {
+            hideAllTabs();
+            loadProgressTrackerContent();
+        });
+
+        // Function to hide all tab contents
+        function hideAllTabs() {
+            const tabs = ["dashboard-content", "company-universe-content", "progress-content"];
+            tabs.forEach((tabId) => {
+                const tabContent = document.getElementById(tabId);
+                tabContent.style.display = "none";
+            });
+        }
+
+        // Function to load the Dashboard content
+        function loadDashboardContent() {
+            const dashboardContent = document.getElementById("dashboard-content");
+            dashboardContent.style.display = "block";
+            dashboardContent.innerHTML = `
+                <h2>Dashboard</h2>
+                <div class="dashboard-graph">
+                    <img id="graph-image" src="example_graph.png" alt="Returns Over 5 Years">
+                </div>
+                <div class="dashboard-table">
+                    <!-- ... -->
+                </div>
+            `;
+
+            const graphImage = document.getElementById("graph-image");
+            const randomGraphNumber = Math.floor(Math.random() * 3) + 1;
+            console.log(`Random Graph Number: ${randomGraphNumber}`);
+            graphImage.src = `graph${randomGraphNumber}.png`; // Make sure image files exist
+        }
+
+        // Function to load the Company Universe content
+        function loadCompanyUniverseContent() {
+            const companyUniverseContent = document.getElementById("company-universe-content");
+            
+            // Create tabs for each company
+            const tabsHTML = companiesData.map((company, index) => {
+                return `<div class="company-tab" id="company-tab-${index}">${company.name}</div>`;
+            }).join("");
+
+            companyUniverseContent.style.display = "block";
+            companyUniverseContent.innerHTML = `
+                <h2>Company Universe</h2>
+                <div class="company-tabs">
+                    ${tabsHTML}
+                </div>
+                <div class="company-details">
+                    <!-- Company details will be displayed here -->
+                </div>
+            `;
+
+            // Add event listeners to display company details when a tab is clicked
+            companiesData.forEach((company, index) => {
+                const tab = document.getElementById(`company-tab-${index}`);
+                tab.addEventListener("click", function () {
+                    displayCompanyDetails(company);
+                });
+            });
+        }
 
 function loadDashboardContent() {
     const dashboardContent = document.getElementById("dashboard-content");
