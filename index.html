@@ -33,33 +33,62 @@
         <!-- Progress Tracker content -->
     </div>
     
-    <script>
-        // JavaScript code to handle tab switching
-        const dashboardButton = document.getElementById('dashboard-button');
-        const companyTab = document.getElementById('company-tab');
-        const progressTab = document.getElementById('progress-tab');
-        const dashboardContent = document.getElementById('dashboard-content');
-        const companyContent = document.getElementById('company-universe-content');
-        const progressContent = document.getElementById('progress-content');
+<script>
+    // JavaScript code for tab switching
+    document.getElementById("dashboard-button").addEventListener("click", function () {
+        hideAllTabs();
+        loadDashboardContent();
+    });
 
-        dashboardButton.addEventListener('click', () => {
-            dashboardContent.style.display = 'block';
-            companyContent.style.display = 'none';
-            progressContent.style.display = 'none';
-        });
+    document.getElementById("company-tab").addEventListener("click", function () {
+        hideAllTabs();
+        loadCompanyUniverseContent();
+    });
 
-        companyTab.addEventListener('click', () => {
-            dashboardContent.style.display = 'none';
-            companyContent.style.display = 'block';
-            progressContent.style.display = 'none';
-        });
+    document.getElementById("progress-tab").addEventListener("click", function () {
+        hideAllTabs();
+        loadProgressTrackerContent();
+    });
 
-        progressTab.addEventListener('click', () => {
-            dashboardContent.style.display = 'none';
-            companyContent.style.display = 'none';
-            progressContent.style.display = 'block';
+    // Function to hide all tab contents
+    function hideAllTabs() {
+        const tabs = ["dashboard-content", "company-universe-content", "progress-content"];
+        tabs.forEach((tabId) => {
+            const tabContent = document.getElementById(tabId);
+            tabContent.style.display = "none";
         });
-    </script>
+    }
+
+    // Function to load the Dashboard content
+    function loadDashboardContent() {
+        // ... Your existing code for loading Dashboard content ...
+    }
+
+    // Function to load the Company Universe content
+    function loadCompanyUniverseContent() {
+        // ... Your existing code for loading Company Universe content ...
+    }
+
+    // Function to load the Progress Tracker content
+    function loadProgressTrackerContent() {
+        // ... Your existing code for loading Progress Tracker content ...
+    }
+
+    // Function to display company details
+    function displayCompanyDetails(company) {
+        // ... Your existing code for displaying company details ...
+    }
+
+    // Function to display progress details
+    function displayProgressDetails(progressPart) {
+        // ... Your existing code for displaying progress details ...
+    }
+
+    // Call the loadDashboardContent() function when the page loads (default tab)
+    window.onload = function () {
+        loadDashboardContent();
+    };
+</script>
 </body>
 </html>
 
