@@ -111,23 +111,7 @@
         loadDashboardContent();
     };
 </script>
-function loadDashboardContent() {
-    const dashboardContent = document.getElementById("dashboard-content");
-    dashboardContent.innerHTML = `
-        <h2>Dashboard</h2>
-        <div class="dashboard-graph">
-            <img id="graph-image" src="example_graph.png" alt="Returns Over 5 Years">
-        </div>
-        <div class="dashboard-table">
-            <!-- ... -->
-        </div>
-    `;
 
-    const graphImage = document.getElementById("graph-image");
-    const randomGraphNumber = Math.floor(Math.random() * 3) + 1;
-    console.log(`Random Graph Number: ${randomGraphNumber}`); // Debugging line
-    graphImage.src = `graph${randomGraphNumber}.png`; // Make sure image files exist
-}
 
 // Define an array of example company data
 const companiesData = [
