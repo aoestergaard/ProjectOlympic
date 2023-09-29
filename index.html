@@ -21,40 +21,45 @@
     
     <!-- Content containers -->
     <div id="dashboard-content" class="hidden">
-        <h2>Dashboard</h2>
-        <div class="dashboard-graph">
-            <img id="graph-image" src="example_graph.png" alt="Returns Over 5 Years">
-        </div>
-        <div class="dashboard-table">
-            <!-- ... -->
-        </div>
+        <!-- Dashboard content -->
     </div>
 
     <div id="company-universe-content" class="hidden">
-        <h2>Company Universe</h2>
-        <div class="company-tabs">
-            <!-- Tabs and content will be generated here -->
-        </div>
-        <div class="company-details">
-            <!-- Company details will be displayed here -->
-        </div>
+        <!-- Company Universe content -->
     </div>
 
     <!-- Progress Tracker Content -->
     <div id="progress-content" class="hidden">
-        <h2>Progress Tracker</h2>
-        <div class="progress-wheel">
-            <div class="progress-part" id="fund-setup">Fund Setup</div>
-            <div class="progress-part" id="source-deals">Source Deals</div>
-            <div class="progress-part" id="buy-companies">Buy Companies</div>
-            <div class="progress-part" id="value-creation">Value Creation</div>
-            <div class="progress-part" id="realize-investments">Realize Investments</div>
-        </div>
-        <div class="progress-details">
-            <!-- Progress details will be displayed here -->
-        </div>
+        <!-- Progress Tracker content -->
     </div>
     
-    <script src="script.js"></script>
+    <script>
+        // JavaScript code to handle tab switching
+        const dashboardButton = document.getElementById('dashboard-button');
+        const companyTab = document.getElementById('company-tab');
+        const progressTab = document.getElementById('progress-tab');
+        const dashboardContent = document.getElementById('dashboard-content');
+        const companyContent = document.getElementById('company-universe-content');
+        const progressContent = document.getElementById('progress-content');
+
+        dashboardButton.addEventListener('click', () => {
+            dashboardContent.style.display = 'block';
+            companyContent.style.display = 'none';
+            progressContent.style.display = 'none';
+        });
+
+        companyTab.addEventListener('click', () => {
+            dashboardContent.style.display = 'none';
+            companyContent.style.display = 'block';
+            progressContent.style.display = 'none';
+        });
+
+        progressTab.addEventListener('click', () => {
+            dashboardContent.style.display = 'none';
+            companyContent.style.display = 'none';
+            progressContent.style.display = 'block';
+        });
+    </script>
 </body>
 </html>
+
