@@ -193,9 +193,7 @@ document.getElementById("company-tab").addEventListener("click", function () {
     loadCompanyUniverseContent();
 });
 
-function loadCompanyUniverseContent() {
-    const companyUniverseContent = document.getElementById("company-universe-content");
-    
+
     // Create tabs for each company
     const tabsHTML = companiesData.map((company, index) => {
         return `<div class="company-tab" id="company-tab-${index}">${company.name}</div>`;
