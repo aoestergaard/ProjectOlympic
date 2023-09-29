@@ -8,7 +8,7 @@ body, h1, h2, p, button {
 body {
     font-family: Arial, sans-serif;
     background-color: #434472; /* Background color */
-    color: #fff; /* Text color */
+    color: #b0c4de; /* Text color */
     text-align: center;
     padding: 20px;
 }
@@ -34,7 +34,7 @@ h1 {
 /* Tab button styles */
 .tabs button {
     background-color: transparent;
-    color: #f0f0f0;
+    color: #b0c4de;
     border: none;
     cursor: pointer;
     padding: 10px 20px;
