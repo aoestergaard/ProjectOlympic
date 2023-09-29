@@ -141,3 +141,43 @@ function displayCompanyDetails(company) {
     `;
 }
 
+// Load the Progress Tracker content when the tab is clicked
+document.getElementById("progress-tab").addEventListener("click", function () {
+    loadProgressTrackerContent();
+});
+
+function loadProgressTrackerContent() {
+    const progressTrackerContent = document.getElementById("content");
+    
+    progressTrackerContent.innerHTML = `
+        <h2>Progress Tracker</h2>
+        <div class="progress-wheel">
+            <div class="progress-part" id="fund-setup">Fund Setup</div>
+            <div class="progress-part" id="source-deals">Source Deals</div>
+            <div class="progress-part" id="buy-companies">Buy Companies</div>
+            <div class="progress-part" id="value-creation">Value Creation</div>
+            <div class="progress-part" id="realize-investments">Realize Investments</div>
+        </div>
+        <div class="progress-details">
+            <!-- Progress details will be displayed here -->
+        </div>
+    `;
+
+    // Add event listeners to each progress part
+    const progressParts = document.querySelectorAll(".progress-part");
+    progressParts.forEach((part) => {
+        part.addEventListener("click", function () {
+            displayProgressDetails(part.id);
+        });
+    });
+}
+
+// Function to display progress details
+function displayProgressDetails(progressPart) {
+    const progressDetailsContainer = document.querySelector(".progress-details");
+    progressDetailsContainer.innerHTML = `
+        <h3>${progressPart}</h3>
+        <p>Details for ${progressPart} will be displayed here.</p>
+    `;
+}
+
